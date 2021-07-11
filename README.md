@@ -7,8 +7,8 @@ An open source framework for recommendation of ten items, to the customers who a
 
 ## Run
 0. Requirements:
-  * Install python3
-  * pandas==1.3.0
-  * pyspark==3.1.2
+   * Install python3
+   * pandas==1.3.0
+   * pyspark==3.1.2
 1. Running:
   You can give maximum three individual items with their product code. 
