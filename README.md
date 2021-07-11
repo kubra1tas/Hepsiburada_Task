@@ -12,4 +12,4 @@ An open source framework for recommendation of ten items, to the customers who a
    * pyspark==3.1.2
 1. Running:
   You can give maximum three individual items with their product code. Sample input :
-    `python3 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000NE24H"`
+    `python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"`
