@@ -15,4 +15,7 @@ An open source framework for recommendation of ten items, to the customers who a
     `python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"`
 2. Backbone of the model relies on FPGrowth that is located under Spark MLlib : https://spark.apache.org/docs/latest/ml-frequent-pattern-mining.html 
 3. Rules of the basket analysis are generated with the following hyper-parameters : 
-    `minSupport=0.006, minConfidence=0.006`
+    `minSupport= 0.0006, minConfidence= 0.0006`
+4. In order to create a new rule list with a different hyper-parameters, please type:
+    `python3.6 recomm.py --minSupport 0.007 --minConfidence 0.004
+`
