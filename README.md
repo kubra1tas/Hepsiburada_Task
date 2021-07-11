@@ -17,5 +17,5 @@ An open source framework for recommendation of ten items, to the customers who a
 3. Rules of the basket analysis are generated with the following hyper-parameters : 
     `minSupport= 0.0006, minConfidence= 0.0006`
 4. In order to create a new rule list with a different hyper-parameters, please type:
-    `python3.6 recomm.py --minSupport 0.007 --minConfidence 0.004
-`
+    `python3.6 recomm.py --minSupport 0.007 --minConfidence 0.004`
+5. In the case of no rule based descendent item is found, the code will present the ten items that are added to the cart the most frequently. 
