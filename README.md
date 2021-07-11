@@ -13,3 +13,6 @@ An open source framework for recommendation of ten items, to the customers who a
 1. Running:
   You can give maximum three individual items with their product code. Sample input :
     `python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"`
+2. Backbone of the model relies on FPGrowth that is located under Spark MLlib : https://spark.apache.org/docs/latest/ml-frequent-pattern-mining.html 
+3. Rules of the basket analysis are generated with the following hyper-parameters : 
+    `minSupport=0.006, minConfidence=0.006`
