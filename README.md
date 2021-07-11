@@ -23,7 +23,12 @@ An open source framework for recommendation of ten items, to the customers who a
 
 Sample inputs and coressponding frequently bought together items that are recommended with scores, in descending order:
 ```
-kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7J7" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7D4"
+kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"
+Items that are added to the cart: 
+ 2803  Maydanoz 
+ 8291  Havuç 500 gr 
+ 5558  Göbek Salata Adet 
+
             category subcategory                   name     score
 4247  Meyve ve Sebze       Sebze                Dereotu  0.522936
 3522  Meyve ve Sebze       Sebze       Soğan Taze Demet  0.486239
@@ -35,10 +40,15 @@ kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --fi
 5214  Meyve ve Sebze       Sebze       Salatalık 500 gr  0.339450
 4358  Meyve ve Sebze       Sebze   Domates Pembe 500 gr  0.339450
 73    Meyve ve Sebze       Sebze  Domates Salkım 500 gr  0.339450
+
 ```
 Sample inputs and top ten added to the carts items, since no frequently bought together items could be found, as will in descending order based on their count :  
 ```
 kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000NE24H"
+Items that are added to the cart: 
+ 2803  Maydanoz 
+ 8657  Carrefour Yeşil Mercimek 1 kg 
+
                   category      subcategory                               name  score
 7259  Et, Balık, Şarküteri       Kırmızı Et                 Dana Biftek 250 gr    0.0
 4869        Meyve ve Sebze            Sebze                       Patates 1 kg    0.0
@@ -50,5 +60,6 @@ kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --fi
 4994  Et, Balık, Şarküteri       Kırmızı Et      Dana Kıyma (%5-%7 Yağ) 250 gr    0.0
 8362             İçecekler  Gazlı İçecekler  Beypazarı Doğal Maden Suyu 200 ml    0.0
 695   Et, Balık, Şarküteri       Kırmızı Et                Dana Kuşbaşı 500 gr    0.0
+
 
 ```
