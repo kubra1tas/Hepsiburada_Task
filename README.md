@@ -70,4 +70,8 @@ Sample inputs and top ten added to the carts items, since no frequently bought t
 ```
 
 ## Decision-Making Process
-Since the data does not include any personal information (such as IP addresses of customers or cookie id's) or any eplicit feedback, collaborative algorithms are not appropriate technique to apply. Even though collaborative filterings (might be user-based, or item-based) are used for personalized recommendations, these models rely on feedback taken from the customer. If there is no explicit feedback, such as rating, implicit feedbacks can be produced (Please for further information, visit : `https://drive.google.com/file/d/1_4G1zuCgrGeh-d_4W1YcBmqsrDiTzdBG/view?usp=sharing`). 
+Since the data does not include any personal information (such as IP addresses of customers or cookie id's) or any eplicit feedback, collaborative algorithms are not appropriate technique to apply. 
+
+Even though collaborative filterings (might be user-based, or item-based) are used for personalized recommendations, these models rely on feedback taken from the customer. If there is no explicit feedback, such as rating, implicit feedbacks can be produced (Please for further information, visit : `https://drive.google.com/file/d/1_4G1zuCgrGeh-d_4W1YcBmqsrDiTzdBG/view?usp=sharing`). 
+
+Evidently, in this project association rule mining is used. Based on the frequency of the items that are purchased together, rules are defined with antecedents and consequents. In the project, input items regard antecedents and if an association is defined as rules, following consequents are returned as consequents. Consequents are designated with a score value, specifying the precision of a consequent to be togetherly purchased. 
