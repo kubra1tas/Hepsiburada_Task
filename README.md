@@ -3,6 +3,7 @@ Hepsiburada Data Scientist Task
 
 ![version](https://img.shields.io/badge/version-v1.0.0-green.svg?style=plastic)
 
+Association Rule Mining
 An open source framework for recommendation of ten items, to the customers who added maximum three items to their cart. Backbone of the model relies on FPGrowth that is located under Spark MLlib-FPM : https://spark.apache.org/docs/latest/ml-frequent-pattern-mining.html. The library mainly finds the frequently bought together items, based on the items that are added to carts. 
 
 
