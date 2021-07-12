@@ -12,25 +12,30 @@ An open source framework for recommendation of ten items, to the customers who a
    * Install python3
    * pandas==1.3.0
    * pyspark==3.1.2
+   
 1. Running:
-  You can give maximum three individual items with their product code. Sample input :
+  You can give maximum three individual items with their product code. Please provide productid of the item that are added to the cart. Sample input :
     `python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"`
-2. Rules of the basket analysis are generated with the following hyper-parameters : 
+    
+2. Recommended items are taken from a list that is generated via association rule mining. Rules of the basket analysis are generated with the following hyper-parameters : 
     `minSupport= 0.0006, minConfidence= 0.0006`
-3. In order to create a new rule list with a different hyper-parameters, please type:
-    `python3.6 recomm.py --minSupport 0.007 --minConfidence 0.004`
+    
+3. In order to create a new rule list with arbitrary value1 and value2 hyper-parameters, please type:
+    `python3.6 recomm.py --minSupport value1 --minConfidence value2`
+    
 4. In the case of no rule based descendent item is found, the code will present the ten items that are added to the cart the most frequently. 
 
 
 Sample inputs and coressponding frequently bought together items that are recommended with scores, in descending order:
 ```
-kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"
-Items that are added to the cart: 
+#/usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000OE7UF" --thirdItem "HBV00000OE7J7"
+>>>>>>Items that are added to the cart: 
  2803  Maydanoz 
  8291  Havuç 500 gr 
  5558  Göbek Salata Adet 
 
-            category subcategory                   name     score
+>>>>>>Recommended Items: 
+             category subcategory                   name     score
 4247  Meyve ve Sebze       Sebze                Dereotu  0.522936
 3522  Meyve ve Sebze       Sebze       Soğan Taze Demet  0.486239
 2556  Meyve ve Sebze       Meyve     Limon Lamas 500 gr  0.477064
@@ -45,12 +50,13 @@ Items that are added to the cart:
 ```
 Sample inputs and top ten added to the carts items, since no frequently bought together items could be found, as will in descending order based on their count :  
 ```
-kubra@it-lunix:~/PycharmProjects/Hepsiburada$ /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000NE24H"
-Items that are added to the cart: 
+ # /usr/bin/python3.6 getItem.py --firstItem "HBV00000OE7D4" --secondItem "HBV00000NE24H"
+>>>>>>Items that are added to the cart: 
  2803  Maydanoz 
  8657  Carrefour Yeşil Mercimek 1 kg 
 
-                  category      subcategory                               name  score
+>>>>>>Recommended Items: 
+                   category      subcategory                               name  score
 7259  Et, Balık, Şarküteri       Kırmızı Et                 Dana Biftek 250 gr    0.0
 4869        Meyve ve Sebze            Sebze                       Patates 1 kg    0.0
 4358        Meyve ve Sebze            Sebze               Domates Pembe 500 gr    0.0
@@ -61,8 +67,6 @@ Items that are added to the cart:
 4994  Et, Balık, Şarküteri       Kırmızı Et      Dana Kıyma (%5-%7 Yağ) 250 gr    0.0
 8362             İçecekler  Gazlı İçecekler  Beypazarı Doğal Maden Suyu 200 ml    0.0
 695   Et, Balık, Şarküteri       Kırmızı Et                Dana Kuşbaşı 500 gr    0.0
-
-
 ```
 
 ## Decision-Making Process
